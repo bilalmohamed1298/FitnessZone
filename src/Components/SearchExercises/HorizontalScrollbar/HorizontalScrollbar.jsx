@@ -1,5 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 
 import RightArrowIcon from "../../../../assets/icons/right-arrow.png";
@@ -68,7 +68,7 @@ const HorizontalScrolbar = ({
                   onClick={() => {
                     setBodyPart(item);
                     window.scrollTo({
-                      top: 1300,
+                      top: 1280,
                       left: 100,
                       behavior: "smooth",
                     });

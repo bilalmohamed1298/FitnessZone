@@ -7,26 +7,19 @@ import ExerciseVideos from "../Components/ExerciseDetails/ExerciseVedios/Exercis
 import SimilarExercises from "../Components/ExerciseDetails/SimilarExercises/SimilarExercises";
 
 const ExerciseDetails = () => {
-  let {
-    ExercisesData,
-    musclesData,
-    Exercises,
-    setExercises,
-    muscles,
-    setMuscles,
-  } = useContext(ExercisesContext);
+  let { ExercisesData, Exercises, setExercises } = useContext(ExercisesContext);
   const [exerciseDetails, setexerciseDetails] = useState({});
 
   const params = useParams();
   const index = params.id;
 
-  useEffect(()=>{
-    setExercises(ExercisesData)
-  },[])
+  useEffect(() => {
+    setExercises(ExercisesData);
+  }, []);
 
   useEffect(() => {
     setexerciseDetails(Exercises[index - 1]);
-  }, [Exercises,params]);
+  }, [Exercises, params]);
 
   console.log(exerciseDetails);
 
@@ -36,15 +29,18 @@ const ExerciseDetails = () => {
         minHeight: "100vh",
       }}
     >
-      {exerciseDetails?(
+      {exerciseDetails ? (
         <>
-            <Detail exerciseDetails={exerciseDetails} />
-            <ExerciseVideos exerciseDetails={exerciseDetails} />
-            <SimilarExercises Exercises={Exercises} exerciseDetails={exerciseDetails} />
+          <Detail exerciseDetails={exerciseDetails} />
+          <ExerciseVideos exerciseDetails={exerciseDetails} />
+          <SimilarExercises
+            Exercises={Exercises}
+            exerciseDetails={exerciseDetails}
+          />
         </>
-          )
-      :('Loading...')}
-
+      ) : (
+        "Loading..."
+      )}
     </Box>
   );
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Container, Typography, Link, Grid } from "@mui/material";
 
 const Footer = () => {
@@ -9,10 +8,10 @@ const Footer = () => {
         backgroundColor: "#D32F2F",
         color: "white",
         py: 10,
-        mt:8
+        mt: 8,
       }}
     >
-      <Container >
+      <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6">About Us</Typography>
@@ -22,9 +21,17 @@ const Footer = () => {
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6">Quick Links</Typography>
-            <Link href="#" color="inherit" underline="none">Home</Link><br />
-            <Link href="#" color="inherit" underline="none">Services</Link><br />
-            <Link href="#" color="inherit" underline="none">Contact</Link>
+            <Link href="#" color="inherit" underline="none">
+              Home
+            </Link>
+            <br />
+            <Link href="#" color="inherit" underline="none">
+              Services
+            </Link>
+            <br />
+            <Link href="#" color="inherit" underline="none">
+              Contact
+            </Link>
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6">Follow Us</Typography>
@@ -33,8 +40,10 @@ const Footer = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Box textAlign="center" mt={2}>
-          <Typography variant="body2">© {new Date().getFullYear()} Bilal Mourad. All rights reserved.</Typography>
+        <Box textAlign="center" mt={10}>
+          <Typography variant="body2">
+            © {new Date().getFullYear()} Bilal Mourad. All rights reserved.
+          </Typography>
         </Box>
       </Container>
     </Box>

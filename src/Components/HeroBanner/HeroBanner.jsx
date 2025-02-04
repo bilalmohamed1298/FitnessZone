@@ -1,5 +1,5 @@
 import { Box, Typography, Button } from "@mui/material";
-import React from "react";
+import { Link } from "react-router-dom";
 
 const HeroBanner = () => {
   return (
@@ -7,38 +7,53 @@ const HeroBanner = () => {
       sx={{
         mt: { sm: "212px", xs: "70px" },
         ml: { sm: "100px", xs: "0px" },
-        textAlign:{xs:'center',sm:'initial'}
+        textAlign: { xs: "center", sm: "initial" },
       }}
-      position='relative'
-
+      position="relative"
     >
-      <Typography style={{ fontWeight: "600",fontSize:'30px', color: "red"}}>
-        Fitness Clup
-      </Typography>
       <Typography
-        style={{ fontWeight: "700"}}
-        sx={{ fontSize:{sm:"44px",xs:'40px'}}}
-        my='35px'
+        style={{
+          fontWeight: "600",
+          fontSize: "30px",
+          color: "red",
+          textTransform: "uppercase",
+        }}
       >
-        Sweat, Smile <br /> And Repeat
+        Fitness Zone
       </Typography>
-      <Typography lineHeight={'35px'} mb={4} color='gray'>Check out the most effective exercises</Typography>
-      <Button variant="contained" size="small" color="error" sx={{p:'10px',mb:'20px'}} >
-        Explore Exercises
-      </Button>
       <Typography
-      fontSize={'200px'}
-      fontWeight={'600'}
-      color={'error'}
-      sx={{opacity:'30%',
-        display:{lg:'block',xs:'none'}
-      }}
+        style={{ fontWeight: "700" }}
+        sx={{ fontSize: { sm: "35px", xs: "40px" } }}
+        my="35px"
+      >
+        Smile, Build Strength <br /> & Stay Consistent
+      </Typography>
+      <Typography lineHeight={"35px"} mb={4} color="gray">
+        Boost Your Fitness with Proven Exercises
+      </Typography>
+      <Link to="/exercises">
+        <Button
+          variant="contained"
+          size="small"
+          color="error"
+          sx={{ p: "10px", mb: "20px" }}
+        >
+          Explore Exercises
+        </Button>
+      </Link>
+      <Typography
+        fontSize={"200px"}
+        fontWeight={"600"}
+        color={"error"}
+        sx={{ opacity: "30%", display: { lg: "block", xs: "none" } }}
       >
         Exercises
       </Typography>
-      <img src="../../assets/images/banner.png" alt="" 
-      className="hero-banner-img"/>
-
+      <img
+        src="../../assets/images/banner.png"
+        alt=""
+        className="hero-banner-img"
+      />
     </Box>
   );
 };

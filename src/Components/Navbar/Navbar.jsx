@@ -10,7 +10,7 @@ const Navbar = () => {
         gap: { sm: "122px", xs: "40px" },
         mt: { sm: "32px", xs: "20px" },
       }}
-      px='30px'
+      px="30px"
     >
       <Link to="/">
         <img src="../../assets/images/Logo.png" alt="Logo" />

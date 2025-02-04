@@ -2,12 +2,10 @@ import {
   Box,
   Button,
   CircularProgress,
-  Pagination,
   Paper,
   Stack,
   Typography,
 } from "@mui/material";
-import React from "react";
 import { Link } from "react-router-dom";
 
 const SimilarExercises = ({ Exercises, exerciseDetails }) => {
@@ -29,9 +27,12 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
             fontWeight: "bold",
             mb: 6,
             textAlign: { sm: "left", xs: "center" },
+            textTransform: "capitalize",
           }}
         >
-          Similar <span style={{ color: "#CC2526" }}>Muscle</span> Exercises
+          More{" "}
+          <span style={{ color: "#CC2526" }}>{exerciseDetails.muscle}</span>{" "}
+          Exercises
         </Typography>
         <Stack m={3}>
           {Exercises.length > 0 ? (
@@ -42,7 +43,7 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                 alignItems="center"
                 sx={{
                   gap: "40px",
-                  justifyContent: { sm: "left", xs: "center" },
+                  justifyContent: { lg: "left", xs: "center" },
                 }}
               >
                 {Exercises.filter(
@@ -57,8 +58,12 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                   ).map((exercise, index) => (
                     <Paper key={index} elevation={4} sx={{ borderRadius: 3 }}>
                       <Link
-                        className="exercise-card"
+                        className="exercise-card similarExe"
                         to={`/exercise/${exercise.id}`}
+                        onClick={window.scrollTo({
+                          top: 0,
+                          left: 100,
+                        })}
                       >
                         <img
                           src={`../../../assets/exercises-GIFs/${exercise.name}.gif`}
@@ -105,8 +110,13 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                     </Paper>
                   ))
                 ) : (
-                  <Box>
-                    <Typography>There is no Similar Muscle Exercises :(</Typography>
+                  <Box sx={{ height: "150px", mt: 10 }}>
+                    <Typography fontWeight={"bold"}>
+                      There is no similar muscle exercises{" "}
+                      <span style={{ color: "#CC2526", fontWeight: "bold" }}>
+                        :(
+                      </span>
+                    </Typography>
                   </Box>
                 )}
               </Stack>
@@ -136,9 +146,12 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
             fontWeight: "bold",
             mb: 6,
             textAlign: { sm: "left", xs: "center" },
+            textTransform: "capitalize",
           }}
         >
-          Similar <span style={{ color: "#CC2526" }}>Difficulty</span> Exercises
+          More{" "}
+          <span style={{ color: "#CC2526" }}>{exerciseDetails.difficulty}</span>{" "}
+          Exercises
         </Typography>
         <Stack m={3}>
           {Exercises.length > 0 ? (
@@ -146,71 +159,85 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
               <Stack
                 direction="row"
                 flexWrap="wrap"
-                justifyContent="left"
                 alignItems="center"
                 sx={{
                   gap: "40px",
-                  justifyContent: { sm: "left", xs: "center" },
+                  justifyContent: { lg: "left", xs: "center" },
                 }}
               >
                 {Exercises.filter(
                   (exercise) =>
                     exercise.difficulty === exerciseDetails.difficulty &&
                     exercise.id !== exerciseDetails.id
-                )
-                  .slice(0, 3)
-                  .map((exercise, index) => {
-                    return (
-                      <Paper key={index} elevation={4} sx={{ borderRadius: 3 }}>
-                        <Link
-                          className="exercise-card"
-                          to={`/exercise/${exercise.id}`}
-                        >
-                          <img
-                            src={`../../../assets/exercises-GIFs/${exercise.name}.gif`}
-                            alt="Exercise"
-                          />
-                          <Stack direction="row">
-                            <Button
-                              size="small"
-                              sx={{
-                                color: "#fff",
-                                bgcolor: "#FF8080",
-                                borderRadius: "20px",
-                                mx: "10px",
-                                "&:hover": { color: "#FF8080" },
-                              }}
-                            >
-                              {exercise.muscle}
-                            </Button>
-                            <Button
-                              size="small"
-                              sx={{
-                                color: "#fff",
-                                bgcolor: "#FFE086",
-                                borderRadius: "20px",
-                                mx: "10px",
-                                "&:hover": { color: "#FFE086" },
-                              }}
-                            >
-                              {exercise.difficulty}
-                            </Button>
-                          </Stack>
-                          <Typography
+                ).slice(0, 3).length > 0 ? (
+                  Exercises.filter(
+                    (exercise) =>
+                      exercise.difficulty === exerciseDetails.difficulty &&
+                      exercise.id !== exerciseDetails.id
+                  ).map((exercise, index) => (
+                    <Paper key={index} elevation={4} sx={{ borderRadius: 3 }}>
+                      <Link
+                        className="exercise-card similarExe"
+                        to={`/exercise/${exercise.id}`}
+                        onClick={window.scrollTo({
+                          top: 0,
+                          left: 100,
+                        })}
+                      >
+                        <img
+                          src={`../../../assets/exercises-GIFs/${exercise.name}.gif`}
+                          alt="Exercise"
+                        />
+                        <Stack direction="row">
+                          <Button
+                            size="small"
                             sx={{
-                              color: "black",
-                              p: "20px",
-                              fontSize: "20px",
-                              fontWeight: "600",
-                              textTransform: "capitalize",
+                              color: "#fff",
+                              bgcolor: "#FF8080",
+                              borderRadius: "20px",
+                              mx: "10px",
+                              "&:hover": { color: "#FF8080" },
                             }}
                           >
-                            {exercise.name}
-                          </Typography>
-                        </Link>
-                      </Paper>
-                    );
-                  })}
+                            {exercise.muscle}
+                          </Button>
+                          <Button
+                            size="small"
+                            sx={{
+                              color: "#fff",
+                              bgcolor: "#FFE086",
+                              borderRadius: "20px",
+                              mx: "10px",
+                              "&:hover": { color: "#FFE086" },
+                            }}
+                          >
+                            {exercise.difficulty}
+                          </Button>
+                        </Stack>
+                        <Typography
+                          sx={{
+                            color: "black",
+                            p: "20px",
+                            fontSize: "20px",
+                            fontWeight: "600",
+                            textTransform: "capitalize",
+                          }}
+                        >
+                          {exercise.name}
+                        </Typography>
+                      </Link>
+                    </Paper>
+                  ))
+                ) : (
+                  <Box sx={{ height: "150px", mt: 10 }}>
+                    <Typography fontWeight={"bold"}>
+                      There is no similar difficulty exercises{" "}
+                      <span style={{ color: "#CC2526", fontWeight: "bold" }}>
+                        :(
+                      </span>
+                    </Typography>
+                  </Box>
+                )}
               </Stack>
             </>
           ) : (
@@ -238,9 +265,10 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
             fontWeight: "bold",
             mb: 6,
             textAlign: { sm: "left", xs: "center" },
+            textTransform: "capitalize",
           }}
         >
-          Similar <span style={{ color: "#CC2526" }}>Equipment</span> Exercises
+          More <span style={{ color: "#CC2526" }}>Equipment</span> Exercises
         </Typography>
         <Stack m={3}>
           {Exercises.length > 0 ? (
@@ -248,71 +276,85 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
               <Stack
                 direction="row"
                 flexWrap="wrap"
-                justifyContent="left"
                 alignItems="center"
                 sx={{
                   gap: "40px",
-                  justifyContent: { sm: "left", xs: "center" },
+                  justifyContent: { lg: "left", xs: "center" },
                 }}
               >
                 {Exercises.filter(
                   (exercise) =>
                     exercise.equipment === exerciseDetails.equipment &&
                     exercise.id !== exerciseDetails.id
-                )
-                  .slice(0, 3)
-                  .map((exercise, index) => {
-                    return (
-                      <Paper key={index} elevation={4} sx={{ borderRadius: 3 }}>
-                        <Link
-                          className="exercise-card"
-                          to={`/exercise/${exercise.id}`}
-                        >
-                          <img
-                            src={`../../../assets/exercises-GIFs/${exercise.name}.gif`}
-                            alt="Exercise"
-                          />
-                          <Stack direction="row">
-                            <Button
-                              size="small"
-                              sx={{
-                                color: "#fff",
-                                bgcolor: "#FF8080",
-                                borderRadius: "20px",
-                                mx: "10px",
-                                "&:hover": { color: "#FF8080" },
-                              }}
-                            >
-                              {exercise.muscle}
-                            </Button>
-                            <Button
-                              size="small"
-                              sx={{
-                                color: "#fff",
-                                bgcolor: "#FFE086",
-                                borderRadius: "20px",
-                                mx: "10px",
-                                "&:hover": { color: "#FFE086" },
-                              }}
-                            >
-                              {exercise.difficulty}
-                            </Button>
-                          </Stack>
-                          <Typography
+                ).slice(0, 3).length > 0 ? (
+                  Exercises.filter(
+                    (exercise) =>
+                      exercise.equipment === exerciseDetails.equipment &&
+                      exercise.id !== exerciseDetails.id
+                  ).map((exercise, index) => (
+                    <Paper key={index} elevation={4} sx={{ borderRadius: 3 }}>
+                      <Link
+                        className="exercise-card similarExe"
+                        to={`/exercise/${exercise.id}`}
+                        onClick={window.scrollTo({
+                          top: 0,
+                          left: 100,
+                        })}
+                      >
+                        <img
+                          src={`../../../assets/exercises-GIFs/${exercise.name}.gif`}
+                          alt="Exercise"
+                        />
+                        <Stack direction="row">
+                          <Button
+                            size="small"
                             sx={{
-                              color: "black",
-                              p: "20px",
-                              fontSize: "20px",
-                              fontWeight: "600",
-                              textTransform: "capitalize",
+                              color: "#fff",
+                              bgcolor: "#FF8080",
+                              borderRadius: "20px",
+                              mx: "10px",
+                              "&:hover": { color: "#FF8080" },
                             }}
                           >
-                            {exercise.name}
-                          </Typography>
-                        </Link>
-                      </Paper>
-                    );
-                  })}
+                            {exercise.muscle}
+                          </Button>
+                          <Button
+                            size="small"
+                            sx={{
+                              color: "#fff",
+                              bgcolor: "#FFE086",
+                              borderRadius: "20px",
+                              mx: "10px",
+                              "&:hover": { color: "#FFE086" },
+                            }}
+                          >
+                            {exercise.difficulty}
+                          </Button>
+                        </Stack>
+                        <Typography
+                          sx={{
+                            color: "black",
+                            p: "20px",
+                            fontSize: "20px",
+                            fontWeight: "600",
+                            textTransform: "capitalize",
+                          }}
+                        >
+                          {exercise.name}
+                        </Typography>
+                      </Link>
+                    </Paper>
+                  ))
+                ) : (
+                  <Box sx={{ height: "150px", mt: 10 }}>
+                    <Typography fontWeight={"bold"}>
+                      There is no similar equipment exercises{" "}
+                      <span style={{ color: "#CC2526", fontWeight: "bold" }}>
+                        :(
+                      </span>
+                    </Typography>
+                  </Box>
+                )}
               </Stack>
             </>
           ) : (

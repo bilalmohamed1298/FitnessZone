@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const ExerciseVideos = ({ exerciseDetails }) => {
   const [exerciseVideos, setExerciseVideos] = useState([]);

@@ -3,11 +3,10 @@ import { useContext, useEffect, useState } from "react";
 import { ExercisesContext } from "../../Utils/ExercisesContext";
 import HorizontalScrollbar from "./HorizontalScrollbar/HorizontalScrollbar";
 
-
 const SearchExercises = () => {
-  let {  ExercisesData , musclesData, Exercises, setExercises, muscles, setmuscles} = useContext(ExercisesContext);
+  let { ExercisesData, Exercises, setExercises, muscles } =
+    useContext(ExercisesContext);
   let [searchTerm, setSearchTerm] = useState("");
-
 
   useEffect(() => {
     filterSearchExercises();
@@ -37,13 +36,13 @@ const SearchExercises = () => {
       }}
     >
       <Typography
-        style={{
+        sx={{
           textAlign: "center",
           fontWeight: "700",
-          fontSize: "30px",
+          fontSize: { sm: "30px", xs: "26px" },
         }}
       >
-        Awesome Exercises You <br /> Should Know
+        What&apos;s Your Workout Goal <br /> for Today?
       </Typography>
       <Box style={{ margin: "50px", position: "relative" }}>
         <TextField
@@ -66,12 +65,24 @@ const SearchExercises = () => {
           size="large"
           variant="contained"
           color="error"
+          onClick={() => {
+            window.scrollTo({
+              top: 1100,
+              left: 100,
+              behavior: "smooth",
+            });
+          }}
         >
           Search
         </Button>
       </Box>
       <Box sx={{ width: "100%", p: "30px" }}>
-        <HorizontalScrollbar muscles={muscles} Exercises={Exercises} setExercises={setExercises} ExercisesData={ExercisesData}/>
+        <HorizontalScrollbar
+          muscles={muscles}
+          Exercises={Exercises}
+          setExercises={setExercises}
+          ExercisesData={ExercisesData}
+        />
       </Box>
     </Stack>
   );
