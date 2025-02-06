@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import { useContext, useState } from "react";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 
@@ -9,9 +9,19 @@ const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
 
   return (
-    <Typography onClick={() => scrollPrev()} className="right-arrow">
-      <img src={LeftArrowIcon} alt="right-arrow" />
-    </Typography>
+    <Button
+      variant="contained"
+      color="error"
+      onClick={() => scrollPrev()}
+      className="left-arrow"
+      sx={{
+        mb: 2,
+        borderWidth: 3,
+        borderRadius: "50%",
+      }}
+    >
+      <img src={LeftArrowIcon} alt="left-arrow" />
+    </Button>
   );
 };
 
@@ -19,9 +29,18 @@ const RightArrow = () => {
   const { scrollNext } = useContext(VisibilityContext);
 
   return (
-    <Typography onClick={() => scrollNext()} className="left-arrow">
+    <Button
+      variant="contained"
+      color="error"
+      onClick={() => scrollNext()}
+      className="right-arrow"
+      sx={{
+        borderWidth: 3,
+        borderRadius: "50%",
+      }}
+    >
       <img src={RightArrowIcon} alt="right-arrow" />
-    </Typography>
+    </Button>
   );
 };
 
@@ -35,13 +54,11 @@ const HorizontalScrolbar = ({
 
   const filterExerciseBodyPart = (item) => {
     setExercises(ExercisesData);
-    console.log(Exercises);
+
     // let filteredExerciseBodyPart = Exercises.filter((exercise)=>exercise.bodyPart === item)
     setExercises((Exercises) =>
       Exercises.filter((exercise) => exercise.muscle === item)
     );
-    console.log(ExercisesData);
-    console.log(Exercises);
   };
 
   return (
@@ -68,8 +85,8 @@ const HorizontalScrolbar = ({
                   onClick={() => {
                     setBodyPart(item);
                     window.scrollTo({
-                      top: 1280,
-                      left: 100,
+                      top: 1340,
+                      left: 0,
                       behavior: "smooth",
                     });
                     filterExerciseBodyPart(item);
@@ -78,7 +95,7 @@ const HorizontalScrolbar = ({
                   <img
                     src="../../assets/icons/gym.png"
                     alt="bodypartPhoto"
-                    style={{ width: "40px", height: "40px" }}
+                    style={{ width: "60px", height: "60px" }}
                   />
                   <Typography
                     sx={{

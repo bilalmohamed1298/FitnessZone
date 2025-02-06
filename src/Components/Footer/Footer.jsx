@@ -1,4 +1,6 @@
-import { Box, Container, Typography, Link, Grid } from "@mui/material";
+import { Box, Container, Typography, Grid, IconButton } from "@mui/material";
+import { Link } from "react-router-dom";
+import { Facebook, Twitter, Instagram } from "@mui/icons-material";
 
 const Footer = () => {
   return (
@@ -8,36 +10,101 @@ const Footer = () => {
         backgroundColor: "#D32F2F",
         color: "white",
         py: 10,
-        mt: 8,
       }}
     >
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6">About Us</Typography>
+            <Typography variant="h6" gutterBottom>
+              About Us
+            </Typography>
             <Typography variant="body2">
               We provide high-quality web solutions for businesses.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6">Quick Links</Typography>
-            <Link href="#" color="inherit" underline="none">
+            <Typography variant="h6" gutterBottom>
+              Quick Links
+            </Typography>
+            <Link
+              to="home"
+              style={{
+                textDecoration: "none",
+                color: "#fff",
+                display: "block",
+                margin: "8px 0",
+              }}
+              onClick={() => {
+                window.scroll({
+                  top: 0,
+                });
+              }}
+            >
               Home
             </Link>
-            <br />
-            <Link href="#" color="inherit" underline="none">
-              Services
+            <Link
+              to="exercises"
+              style={{
+                textDecoration: "none",
+                color: "#fff",
+                display: "block",
+                margin: "8px 0",
+              }}
+              onClick={() => {
+                window.scroll({
+                  top: 0,
+                });
+              }}
+            >
+              Exercises
             </Link>
-            <br />
-            <Link href="#" color="inherit" underline="none">
+            <Link
+              to=""
+              style={{
+                textDecoration: "none",
+                color: "#fff",
+                display: "block",
+                margin: "8px 0",
+              }}
+              onClick={() => {
+                window.scroll({
+                  top: 0,
+                });
+              }}
+            >
               Contact
             </Link>
           </Grid>
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6">Follow Us</Typography>
-            <Typography variant="body2">
+            <Typography variant="h6" gutterBottom>
+              Follow Us
+            </Typography>
+            <Typography variant="body2" gutterBottom>
               Stay connected on our social media channels.
             </Typography>
+            <Box>
+              <IconButton
+                href="https://facebook.com"
+                target="_blank"
+                sx={{ color: "#fff" }}
+              >
+                <Facebook />
+              </IconButton>
+              <IconButton
+                href="https://twitter.com"
+                target="_blank"
+                sx={{ color: "#fff" }}
+              >
+                <Twitter />
+              </IconButton>
+              <IconButton
+                href="https://instagram.com"
+                target="_blank"
+                sx={{ color: "#fff" }}
+              >
+                <Instagram />
+              </IconButton>
+            </Box>
           </Grid>
         </Grid>
         <Box textAlign="center" mt={10}>

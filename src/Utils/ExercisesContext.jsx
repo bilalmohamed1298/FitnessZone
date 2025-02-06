@@ -13,14 +13,12 @@ export function ExercisesContextProvider({ children }) {
     let exercisesAPI = await axios.get(
       "https://api.api-ninjas.com/v1/exercises?X-Api-Key=5yLwLgrI6nmqhj47BXklPA==r9uUE7MWfoFS33iR"
     );
-    const idExercisesAPI = exercisesAPI.data.map((exercise,index)=>({
+    const idExercisesAPI = exercisesAPI.data.map((exercise, index) => ({
       ...exercise,
-      id:index+1 
-    }))
+      id: index + 1,
+    }));
     setExercisesData([...idExercisesAPI]);
   };
-
-
 
   const getmusclesData = () =>
     (musclesData = ExercisesData.map((exercise) => exercise.muscle));

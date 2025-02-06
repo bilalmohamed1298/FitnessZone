@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, CircularProgress } from "@mui/material";
 import Detail from "../Components/ExerciseDetails/Detail/Detail";
 import { ExercisesContext } from "../Utils/ExercisesContext";
 import { useContext, useEffect, useState } from "react";
@@ -11,17 +11,15 @@ const ExerciseDetails = () => {
   const [exerciseDetails, setexerciseDetails] = useState({});
 
   const params = useParams();
-  const index = params.id;
+  const id = params.id;
 
   useEffect(() => {
     setExercises(ExercisesData);
   }, []);
 
   useEffect(() => {
-    setexerciseDetails(Exercises[index - 1]);
-  }, [Exercises, params]);
-
-  console.log(exerciseDetails);
+    setexerciseDetails(Exercises[id - 1]);
+  }, [Exercises, id]);
 
   return (
     <Box
@@ -32,14 +30,23 @@ const ExerciseDetails = () => {
       {exerciseDetails ? (
         <>
           <Detail exerciseDetails={exerciseDetails} />
-          <ExerciseVideos exerciseDetails={exerciseDetails} />
+          <ExerciseVideos exerciseDetails={exerciseDetails} id={id} />
           <SimilarExercises
             Exercises={Exercises}
             exerciseDetails={exerciseDetails}
           />
         </>
       ) : (
-        "Loading..."
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "70vh",
+          }}
+        >
+          <CircularProgress color="error" size={60} />
+        </Box>
       )}
     </Box>
   );

@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 
 const SimilarExercises = ({ Exercises, exerciseDetails }) => {
   return (
@@ -43,7 +44,7 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                 alignItems="center"
                 sx={{
                   gap: "40px",
-                  justifyContent: { lg: "left", xs: "center" },
+                  justifyContent: { md: "left", xs: "center" },
                 }}
               >
                 {Exercises.filter(
@@ -56,7 +57,7 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                       exercise.muscle === exerciseDetails.muscle &&
                       exercise.id !== exerciseDetails.id
                   ).map((exercise, index) => (
-                    <Paper key={index} elevation={4} sx={{ borderRadius: 3 }}>
+                    <Paper key={index} elevation={2} sx={{ borderRadius: 3 }}>
                       <Link
                         className="exercise-card similarExe"
                         to={`/exercise/${exercise.id}`}
@@ -74,10 +75,10 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                             size="small"
                             sx={{
                               color: "#fff",
-                              bgcolor: "#FF8080",
+                              bgcolor: "#f76b6b",
                               borderRadius: "20px",
                               mx: "10px",
-                              "&:hover": { color: "#FF8080" },
+                              "&:hover": { color: "#f76b6b" },
                             }}
                           >
                             {exercise.muscle}
@@ -86,10 +87,10 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                             size="small"
                             sx={{
                               color: "#fff",
-                              bgcolor: "#FFE086",
+                              bgcolor: "#fbd872",
                               borderRadius: "20px",
                               mx: "10px",
-                              "&:hover": { color: "#FFE086" },
+                              "&:hover": { color: "#fbd872" },
                             }}
                           >
                             {exercise.difficulty}
@@ -110,12 +111,13 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                     </Paper>
                   ))
                 ) : (
-                  <Box sx={{ height: "150px", mt: 10 }}>
+                  <Box sx={{ height: "150px", mt: 10, textAlign: "center" }}>
+                    <SentimentVeryDissatisfiedIcon
+                      style={{ fontSize: 60 }}
+                      color="error"
+                    />{" "}
                     <Typography fontWeight={"bold"}>
-                      There is no similar muscle exercises{" "}
-                      <span style={{ color: "#CC2526", fontWeight: "bold" }}>
-                        :(
-                      </span>
+                      No similar muscle exercises are available
                     </Typography>
                   </Box>
                 )}
@@ -162,7 +164,7 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                 alignItems="center"
                 sx={{
                   gap: "40px",
-                  justifyContent: { lg: "left", xs: "center" },
+                  justifyContent: { md: "left", xs: "center" },
                 }}
               >
                 {Exercises.filter(
@@ -193,10 +195,10 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                             size="small"
                             sx={{
                               color: "#fff",
-                              bgcolor: "#FF8080",
+                              bgcolor: "#f76b6b",
                               borderRadius: "20px",
                               mx: "10px",
-                              "&:hover": { color: "#FF8080" },
+                              "&:hover": { color: "#f76b6b" },
                             }}
                           >
                             {exercise.muscle}
@@ -205,10 +207,10 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                             size="small"
                             sx={{
                               color: "#fff",
-                              bgcolor: "#FFE086",
+                              bgcolor: "#fbd872",
                               borderRadius: "20px",
                               mx: "10px",
-                              "&:hover": { color: "#FFE086" },
+                              "&:hover": { color: "#fbd872" },
                             }}
                           >
                             {exercise.difficulty}
@@ -229,12 +231,13 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                     </Paper>
                   ))
                 ) : (
-                  <Box sx={{ height: "150px", mt: 10 }}>
+                  <Box sx={{ height: "150px", mt: 10, textAlign: "center" }}>
+                    <SentimentVeryDissatisfiedIcon
+                      style={{ fontSize: 60 }}
+                      color="error"
+                    />{" "}
                     <Typography fontWeight={"bold"}>
-                      There is no similar difficulty exercises{" "}
-                      <span style={{ color: "#CC2526", fontWeight: "bold" }}>
-                        :(
-                      </span>
+                      No similar difficulty exercises are available
                     </Typography>
                   </Box>
                 )}
@@ -279,7 +282,7 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                 alignItems="center"
                 sx={{
                   gap: "40px",
-                  justifyContent: { lg: "left", xs: "center" },
+                  justifyContent: { md: "left", xs: "center" },
                 }}
               >
                 {Exercises.filter(
@@ -310,10 +313,10 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                             size="small"
                             sx={{
                               color: "#fff",
-                              bgcolor: "#FF8080",
+                              bgcolor: "#f76b6b",
                               borderRadius: "20px",
                               mx: "10px",
-                              "&:hover": { color: "#FF8080" },
+                              "&:hover": { color: "#f76b6b" },
                             }}
                           >
                             {exercise.muscle}
@@ -322,10 +325,10 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                             size="small"
                             sx={{
                               color: "#fff",
-                              bgcolor: "#FFE086",
+                              bgcolor: "#fbd872",
                               borderRadius: "20px",
                               mx: "10px",
-                              "&:hover": { color: "#FFE086" },
+                              "&:hover": { color: "#fbd872" },
                             }}
                           >
                             {exercise.difficulty}
@@ -346,12 +349,13 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                     </Paper>
                   ))
                 ) : (
-                  <Box sx={{ height: "150px", mt: 10 }}>
+                  <Box sx={{ height: "150px", mt: 10, textAlign: "center" }}>
+                    <SentimentVeryDissatisfiedIcon
+                      style={{ fontSize: 60 }}
+                      color="error"
+                    />{" "}
                     <Typography fontWeight={"bold"}>
-                      There is no similar equipment exercises{" "}
-                      <span style={{ color: "#CC2526", fontWeight: "bold" }}>
-                        :(
-                      </span>
+                      No similar equipment exercises are available
                     </Typography>
                   </Box>
                 )}

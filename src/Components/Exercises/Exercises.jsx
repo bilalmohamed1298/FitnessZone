@@ -15,14 +15,14 @@ const Exercises = () => {
   let { Exercises } = useContext(ExercisesContext);
   const [page, setPage] = useState(1);
 
-  const itemsPerPage = 6;
+  const itemsPerPage = 9;
   const startIndex = (page - 1) * itemsPerPage;
   const lastIndex = startIndex + itemsPerPage;
   const displayedExercises = Exercises.slice(startIndex, lastIndex);
 
   const handlePageChange = (e, value) => {
     setPage(value);
-    console.log(page);
+     
   };
 
   return (
@@ -62,10 +62,11 @@ const Exercises = () => {
                       <Button
                         sx={{
                           color: "#fff",
-                          bgcolor: "#FF8080",
+                          bgcolor: "#f76b6b",
                           borderRadius: "20px",
                           mx: "10px",
-                          "&:hover": { color: "#FF8080" },
+                          "&:hover": { color: "#f76b6b" },
+                          fontWeight: "bold",
                         }}
                       >
                         {exercise.muscle}
@@ -73,10 +74,11 @@ const Exercises = () => {
                       <Button
                         sx={{
                           color: "#fff",
-                          bgcolor: "#FFE086",
+                          bgcolor: "#fbd872",
                           borderRadius: "20px",
                           mx: "10px",
-                          "&:hover": { color: "#FFE086" },
+                          "&:hover": { color: "#fbd872" },
+                          fontWeight: "bold",
                         }}
                       >
                         {exercise.difficulty}

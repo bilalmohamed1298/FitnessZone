@@ -1,11 +1,9 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Paper, Stack, Typography } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const ExerciseVideos = ({ exerciseDetails }) => {
+const ExerciseVideos = ({ exerciseDetails, id }) => {
   const [exerciseVideos, setExerciseVideos] = useState([]);
-
-  
 
   const options = {
     method: "GET",
@@ -21,44 +19,108 @@ const ExerciseVideos = ({ exerciseDetails }) => {
       options
     );
     setExerciseVideos(youtubeAPI.data.contents);
-    console.log(exerciseVideos);
   };
   useEffect(() => {
     fetchYoutubeAPI();
-
   }, [exerciseDetails]);
 
   return (
     <>
-      {exerciseVideos.length>0 ?
-      <Box>
-              <Typography>
-        Watch <apan style={{color:'#CC2526'}}>{exerciseDetails.name}</apan> Videos
-      </Typography>
-      <Stack
-        sx={{
-          flexDirection:'row',
-          flexWrap:'wrap',
-          justifyContent:'center',
-          gap:2
-        }}
-      >
-      {exerciseVideos.slice(0,3).map((video,index)=>{
-          return(
-            <Box key={index}>
-              <Stack>
-                <img src={video.video.thumbnails[0].url} alt="Exercise Video" />
-                {video.video.title}
-              </Stack>
-            </Box>
-          )
-        })
-      }
-      </Stack>
-      </Box>
-      :'Loading...'}
-      </>
-  )
+      {exerciseVideos.length > 0 ? (
+        <Box
+          sx={{
+            my: { sm: 16, xs: 3 },
+            mx: { sm: 8, xs: 3 },
+          }}
+        >
+          <Typography
+            variant={"h4"}
+            sx={{
+              fontWeight: "bold",
+              my: 10,
+              textAlign: { sm: "left", xs: "center" },
+            }}
+          >
+            Watch{" "}
+            <span style={{ color: "#CC2526" }}>{exerciseDetails.name}</span>{" "}
+            Videos
+          </Typography>
+          <Stack
+            sx={{
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: { md: "left", xs: "center" },
+              gap: 2,
+            }}
+          >
+            {exerciseVideos.slice(0, 3).map((video, index) => {
+              return (
+                <Box
+                  key={index}
+                  sx={{
+                    ":hover": { scale: "1.1", transitionDuration: "0.5s" },
+                  }}
+                >
+                  <Paper
+                    elevation={2}
+                    sx={{
+                      bgcolor: "#fff",
+                      borderRadius: "5%",
+                      m: 1,
+                      width: { md: "420px", xs: "380px" },
+                    }}
+                  >
+                    <Stack sx={{ justifyContent: "center", width: "100%" }}>
+                      <a
+                        href={`https://www.youtube.com/watch?v=${video.video.videoId}`}
+                        target="_blank"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        <img
+                          src={video.video.thumbnails[0].url}
+                          alt="Exercise Video"
+                          style={{
+                            width: "100%",
+                            borderRadius: "10px 10px 0 0",
+                          }}
+                        />
+                        <Typography
+                          sx={{
+                            color: "black",
+                            fontWeight: "700",
+                            fontSize: "16px",
+                            mt: 1,
+                            textAlign: "left",
+                            width: "380px",
+                            p: 1,
+                            height: "80px",
+                            textWrap: "wrap",
+                          }}
+                        >
+                          {video.video.title}
+                        </Typography>
+                      </a>
+                    </Stack>
+                  </Paper>
+                </Box>
+              );
+            })}
+          </Stack>
+        </Box>
+      ) : (
+        <Typography
+          sx={{
+            textAlign: "center",
+            color: "#CC2526",
+            fontWeight: "bold",
+            my: 16,
+          }}
+        >
+          Videos Coming Soon...
+        </Typography>
+      )}
+    </>
+  );
 };
 
 export default ExerciseVideos;

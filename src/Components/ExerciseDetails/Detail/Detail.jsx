@@ -27,13 +27,13 @@ const Detail = ({ exerciseDetails }) => {
           <img
             src={`../../../assets/exercises-GIFs/${exerciseDetails.name}.gif`}
             alt={exerciseDetails.name}
-            style={{ borderRadius: "20px", width: "500px" }}
+            style={{ borderRadius: "20px", width: "500px"}}
           />
         </Paper>
 
         <Stack sx={{}}>
           <Typography
-            variant="h4"
+            variant="h3"
             sx={{
               fontWeight: "700",
               mt: 1,

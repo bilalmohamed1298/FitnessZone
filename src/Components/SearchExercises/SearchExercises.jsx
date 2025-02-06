@@ -39,7 +39,7 @@ const SearchExercises = () => {
         sx={{
           textAlign: "center",
           fontWeight: "700",
-          fontSize: { sm: "30px", xs: "26px" },
+          fontSize: { sm: "30px", xs: "24px" },
         }}
       >
         What&apos;s Your Workout Goal <br /> for Today?
@@ -61,14 +61,15 @@ const SearchExercises = () => {
           style={{ position: "absolute", height: "100%" }}
           sx={{
             right: "0",
+            fontFamily: "MyCustomFont",
           }}
           size="large"
           variant="contained"
           color="error"
           onClick={() => {
             window.scrollTo({
-              top: 1100,
-              left: 100,
+              top: 1340,
+              left: 0,
               behavior: "smooth",
             });
           }}

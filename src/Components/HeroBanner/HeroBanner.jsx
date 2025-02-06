@@ -1,7 +1,34 @@
 import { Box, Typography, Button } from "@mui/material";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { gsap } from "gsap";
 
 const HeroBanner = () => {
+  const headingRef = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(
+      headingRef.current,
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 0.4,
+        y: 0,
+        stagger: 0.1,
+        duration: 1.5,
+        ease: "power2.out",
+        onStart: () => {
+          gsap.to(headingRef.current, {
+            scale: 1.1,
+            duration: 0.3,
+          });
+        },
+      }
+    );
+  }, []);
+
   return (
     <Box
       sx={{
@@ -16,14 +43,14 @@ const HeroBanner = () => {
           fontWeight: "600",
           fontSize: "30px",
           color: "red",
-          textTransform: "uppercase",
+          textTransform: "capitalize",
         }}
       >
         Fitness Zone
       </Typography>
       <Typography
         style={{ fontWeight: "700" }}
-        sx={{ fontSize: { sm: "35px", xs: "40px" } }}
+        sx={{ fontSize: { sm: "35px", xs: "30px" } }}
         my="35px"
       >
         Smile, Build Strength <br /> & Stay Consistent
@@ -36,18 +63,25 @@ const HeroBanner = () => {
           variant="contained"
           size="small"
           color="error"
-          sx={{ p: "10px", mb: "20px" }}
+          sx={{ p: "10px", mb: "20px", fontFamily: "MyCustomFont" }}
         >
           Explore Exercises
         </Button>
       </Link>
       <Typography
-        fontSize={"200px"}
+        ref={headingRef}
+        fontSize={"100px"}
         fontWeight={"600"}
         color={"error"}
-        sx={{ opacity: "30%", display: { lg: "block", xs: "none" } }}
+        sx={{
+          opacity: "30%",
+          display: { lg: "block", xs: "none" },
+          mt: 18,
+          textTransform: "uppercase",
+          fontFamily: "MyCustomFont",
+        }}
       >
-        Exercises
+        Fitness Zone
       </Typography>
       <img
         src="../../assets/images/banner.png"
