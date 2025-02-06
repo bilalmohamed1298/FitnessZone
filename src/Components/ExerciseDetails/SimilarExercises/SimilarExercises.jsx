@@ -67,7 +67,7 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                         })}
                       >
                         <img
-                          src={`../../../assets/exercises-GIFs/${exercise.name}.gif`}
+                          src={`../../../public/exercises-GIFs/${exercise.name}.gif`}
                           alt="Exercise"
                         />
                         <Stack direction="row">
@@ -187,7 +187,7 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                         })}
                       >
                         <img
-                          src={`../../../assets/exercises-GIFs/${exercise.name}.gif`}
+                          src={`../../../public/exercises-GIFs/${exercise.name}.gif`}
                           alt="Exercise"
                         />
                         <Stack direction="row">
@@ -305,7 +305,7 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
                         })}
                       >
                         <img
-                          src={`../../../assets/exercises-GIFs/${exercise.name}.gif`}
+                          src={`../../../public/exercises-GIFs/${exercise.name}.gif`}
                           alt="Exercise"
                         />
                         <Stack direction="row">

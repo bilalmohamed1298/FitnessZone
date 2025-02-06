@@ -25,7 +25,7 @@ const Detail = ({ exerciseDetails }) => {
       >
         <Paper elevation={0}>
           <img
-            src={`../../../assets/exercises-GIFs/${exerciseDetails.name}.gif`}
+            src={`../../../public/exercises-GIFs/${exerciseDetails.name}.gif`}
             alt={exerciseDetails.name}
             style={{ borderRadius: "20px", width: "500px"}}
           />
@@ -76,7 +76,7 @@ const Detail = ({ exerciseDetails }) => {
                 }}
               >
                 <img
-                  src="../../assets/icons/body-part.png"
+                  src="../../public/icons/body-part.png"
                   alt=""
                   width={"35px"}
                 />
@@ -111,7 +111,7 @@ const Detail = ({ exerciseDetails }) => {
                 }}
               >
                 <img
-                  src="../../assets/icons/target.png"
+                  src="../../public/icons/target.png"
                   alt=""
                   width={"35px"}
                 />
@@ -146,7 +146,7 @@ const Detail = ({ exerciseDetails }) => {
                 }}
               >
                 <img
-                  src="../../assets/icons/equipment.png"
+                  src="../../public/icons/equipment.png"
                   alt=""
                   width={"35px"}
                 />

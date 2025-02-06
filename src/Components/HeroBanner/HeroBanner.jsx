@@ -84,7 +84,7 @@ const HeroBanner = () => {
         Fitness Zone
       </Typography>
       <img
-        src="../../assets/images/banner.png"
+        src="../../public/images/banner.png"
         alt=""
         className="hero-banner-img"
       />

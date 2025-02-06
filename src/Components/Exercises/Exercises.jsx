@@ -55,7 +55,7 @@ const Exercises = () => {
                     to={`/exercise/${exercise.id}`}
                   >
                     <img
-                      src={`../../../assets/exercises-GIFs/${exercise.name}.gif`}
+                      src={`../../../public/exercises-GIFs/${exercise.name}.gif`}
                       alt="Exercise"
                     />
                     <Stack direction="row">

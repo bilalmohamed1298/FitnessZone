@@ -2,8 +2,8 @@ import { Box, Button, Stack, Typography } from "@mui/material";
 import { useContext, useState } from "react";
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 
-import RightArrowIcon from "../../../../assets/icons/right-arrow.png";
-import LeftArrowIcon from "../../../../assets/icons/left-arrow.png";
+import RightArrowIcon from "../../../../public/icons/right-arrow.png";
+import LeftArrowIcon from "../../../../public/icons/left-arrow.png";
 
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
@@ -93,7 +93,7 @@ const HorizontalScrolbar = ({
                   }}
                 >
                   <img
-                    src="../../assets/icons/gym.png"
+                    src="../../public/icons/gym.png"
                     alt="bodypartPhoto"
                     style={{ width: "60px", height: "60px" }}
                   />

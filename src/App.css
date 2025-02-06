@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'MyCustomFont';
-  src: url(../assets/fonts/Xirod.otf) format('opentype');
+  src: url(../public/fonts/Xirod.otf) format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -186,7 +186,7 @@ body {
     height: 100%;
     z-index: -1; /* يخليه ورا كل العناصر */
 /* لون الخلفية الأساسي */
-    background-image: url("../assets/images/background.png"); /* خدوش خفيفة */
+    background-image: url("../public/images/background.png"); /* خدوش خفيفة */
     background-repeat: no-repeat; /* منع تكرار الصورة */
     background-size: cover; /* تغطية الخلفية بالكامل */
     opacity: 0.09;
