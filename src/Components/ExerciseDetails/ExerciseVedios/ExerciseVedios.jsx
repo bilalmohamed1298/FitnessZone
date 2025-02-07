@@ -2,7 +2,7 @@ import { Box, Paper, Stack, Typography } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const ExerciseVideos = ({ exerciseDetails, id }) => {
+const ExerciseVideos = ({ exerciseDetails }) => {
   const [exerciseVideos, setExerciseVideos] = useState([]);
 
   const options = {
@@ -15,7 +15,7 @@ const ExerciseVideos = ({ exerciseDetails, id }) => {
 
   const fetchYoutubeAPI = async () => {
     const youtubeAPI = await axios.request(
-      `https://youtube-search-and-download.p.rapidapi.com/search?query=${exerciseDetails.name}`,
+      `https://youtube-search-and-download.p.rapidapi.com/search?query=${exerciseDetails.name} exercise`,
       options
     );
     setExerciseVideos(youtubeAPI.data.contents);
@@ -67,7 +67,7 @@ const ExerciseVideos = ({ exerciseDetails, id }) => {
                       bgcolor: "#fff",
                       borderRadius: "5%",
                       m: 1,
-                      width: { md: "420px", xs: "380px" },
+                      width: { lg: "400px", xs: "300px" },
                     }}
                   >
                     <Stack sx={{ justifyContent: "center", width: "100%" }}>
@@ -91,7 +91,6 @@ const ExerciseVideos = ({ exerciseDetails, id }) => {
                             fontSize: "16px",
                             mt: 1,
                             textAlign: "left",
-                            width: "380px",
                             p: 1,
                             height: "80px",
                             textWrap: "wrap",

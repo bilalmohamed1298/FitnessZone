@@ -17,7 +17,7 @@ const LeftArrow = () => {
       sx={{
         mb: 2,
         borderWidth: 3,
-        borderRadius: "50%",
+        borderRadius: "30%",
       }}
     >
       <img src={LeftArrowIcon} alt="left-arrow" />
@@ -36,7 +36,7 @@ const RightArrow = () => {
       className="right-arrow"
       sx={{
         borderWidth: 3,
-        borderRadius: "50%",
+        borderRadius: "30%",
       }}
     >
       <img src={RightArrowIcon} alt="right-arrow" />

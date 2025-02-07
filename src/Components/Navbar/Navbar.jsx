@@ -18,11 +18,7 @@ const Navbar = () => {
             ":hover": { scale: "1.2", transition: "0.8s ease" },
           }}
         >
-          <img
-            src="/images/logo.png"
-            alt="Logo"
-            style={{ width: "55px" }}
-          />
+          <img src="/images/logo.png" alt="Logo" style={{ width: "55px" }} />
         </Box>
       </Link>
       <Stack direction={"row"} spacing={4} fontSize={"18px"}>

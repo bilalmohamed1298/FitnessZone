@@ -23,11 +23,16 @@ const Detail = ({ exerciseDetails }) => {
           flexWrap: { lg: "nowrap", xs: "wrap" },
         }}
       >
-        <Paper elevation={0}>
+        <Paper
+          elevation={0}
+          sx={{
+            width: { lg: "1000px", sm: "500px" },
+          }}
+        >
           <img
             src={`/exercises-GIFs/${exerciseDetails.name}.gif`}
             alt={exerciseDetails.name}
-            style={{ borderRadius: "20px", width: "500px"}}
+            style={{ borderRadius: "20px", width: "100%" }}
           />
         </Paper>
 
@@ -75,11 +80,7 @@ const Detail = ({ exerciseDetails }) => {
                   borderRadius: "50px",
                 }}
               >
-                <img
-                  src="/icons/body-part.png"
-                  alt=""
-                  width={"35px"}
-                />
+                <img src="/icons/muscle.png" alt="" width={"35px"} />
               </Box>
               <Typography
                 sx={{
@@ -110,11 +111,7 @@ const Detail = ({ exerciseDetails }) => {
                   borderRadius: "50px",
                 }}
               >
-                <img
-                  src="/icons/target.png"
-                  alt=""
-                  width={"35px"}
-                />
+                <img src="/icons/level.png" alt="" width={"35px"} />
               </Box>
               <Typography
                 sx={{
@@ -145,11 +142,7 @@ const Detail = ({ exerciseDetails }) => {
                   borderRadius: "50px",
                 }}
               >
-                <img
-                  src="/icons/equipment.png"
-                  alt=""
-                  width={"35px"}
-                />
+                <img src="/icons/equipment.png" alt="" width={"35px"} />
               </Box>
               <Typography
                 sx={{
