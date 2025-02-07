@@ -19,7 +19,7 @@ const Navbar = () => {
           }}
         >
           <img
-            src="../../public/images/Logo.png"
+            src="/images/Logo.png"
             alt="Logo"
             style={{ width: "55px" }}
           />

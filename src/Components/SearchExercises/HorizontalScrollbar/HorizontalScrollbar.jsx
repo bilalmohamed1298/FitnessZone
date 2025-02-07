@@ -93,7 +93,7 @@ const HorizontalScrolbar = ({
                   }}
                 >
                   <img
-                    src="../../public/icons/gym.png"
+                    src="/icons/gym.png"
                     alt="bodypartPhoto"
                     style={{ width: "60px", height: "60px" }}
                   />

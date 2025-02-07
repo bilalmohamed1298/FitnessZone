@@ -6,7 +6,7 @@ const FooterHeroSection = () => {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${'/public/images/Footer-Hero.png'})`,
+        backgroundImage: `url('/images/Footer-Hero.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "300px",
