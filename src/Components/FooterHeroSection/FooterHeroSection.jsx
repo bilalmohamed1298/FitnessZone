@@ -27,7 +27,7 @@ const FooterHeroSection = () => {
         </Typography>
         <Typography
           variant="h6"
-          sx={{ mb: 2, fontSize: { md: "20px", xs: "12px" } }}
+          sx={{ mb: 2, fontSize: { md: "20px", xs: "11px" } }}
         >
           Join us today and start your journey to a healthy and strong
           body.
