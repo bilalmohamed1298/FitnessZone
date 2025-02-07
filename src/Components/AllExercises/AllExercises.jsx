@@ -24,7 +24,6 @@ const AllExercises = () => {
         minHeight: "100vh",
       }}
     >
-      <BackgroundDecoration />
       <Typography
         variant="h4"
         sx={{ ml: "30px", mt: "60px", mb: "100px", fontWeight: "bold" }}

@@ -157,6 +157,7 @@ const Detail = ({ exerciseDetails }) => {
           </Stack>
         </Stack>
       </Stack>
+      <hr style={{opacity:'50%',width:'90%',margin:'auto',marginTop:'100px'}} />
     </Box>
   );
 };
