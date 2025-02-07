@@ -22,7 +22,6 @@ const Exercises = () => {
 
   const handlePageChange = (e, value) => {
     setPage(value);
-     
   };
 
   return (
@@ -114,9 +113,11 @@ const Exercises = () => {
               page={page}
               color="error"
               onChange={handlePageChange}
-              onClick={window.scrollTo({
-                top:1340
-              })}
+              onClick={() => {
+                window.scrollTo({
+                  top: 1340,
+                });
+              }}
             />
           </Box>
         </>
