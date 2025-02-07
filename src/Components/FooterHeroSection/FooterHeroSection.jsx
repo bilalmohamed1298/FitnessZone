@@ -1,7 +1,6 @@
 import { Box, Button, Typography, Container } from "@mui/material";
 import { Link } from "react-router-dom";
 
-
 const FooterHeroSection = () => {
   return (
     <Box
@@ -9,7 +8,7 @@ const FooterHeroSection = () => {
         backgroundImage: `url('/images/Footer-Hero.png')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "300px",
+        height: "270px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -28,7 +27,7 @@ const FooterHeroSection = () => {
         </Typography>
         <Typography
           variant="h6"
-          sx={{ mb: 2, fontSize: { md: "20px", xs: "12px" } }}
+          sx={{ mb: 2, fontSize: { md: "20px", xs: "11px" } }}
         >
           Join us today and start your journey to a healthy and strong body.
         </Typography>

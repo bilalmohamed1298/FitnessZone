@@ -55,7 +55,15 @@ const HeroBanner = () => {
       >
         Smile, Build Strength <br /> & Stay Consistent
       </Typography>
-      <Typography lineHeight={"35px"} mb={4} color="gray">
+      <Typography
+        lineHeight={"35px"}
+        mb={4}
+        color="gray"
+        sx={{
+          fontSize: { sm: "16px", xs: "" },
+          display: { sm: "block", xs: "none" },
+        }}
+      >
         Boost Your Fitness with Proven Exercises
       </Typography>
       <Link to="/exercises">

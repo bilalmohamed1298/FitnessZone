@@ -9,7 +9,8 @@ const Footer = () => {
       sx={{
         backgroundColor: "#D32F2F",
         color: "white",
-        py: 10,
+        pt: 10,
+        pb: { sm: 10, xs: 7 },
       }}
     >
       <Container>
@@ -107,7 +108,7 @@ const Footer = () => {
             </Box>
           </Grid>
         </Grid>
-        <Box textAlign="center" mt={10}>
+        <Box textAlign="center" mt={7}>
           <Typography variant="body2">
             © {new Date().getFullYear()} Bilal Mourad. All rights reserved.
           </Typography>

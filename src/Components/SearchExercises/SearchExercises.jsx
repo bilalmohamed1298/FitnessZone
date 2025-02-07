@@ -44,11 +44,10 @@ const SearchExercises = () => {
       >
         What&apos;s Your Workout Goal <br /> for Today?
       </Typography>
-      <Box style={{ margin: "50px", position: "relative" }}>
+      <Box style={{ margin: "50px", position: "relative" }} sx={{}}>
         <TextField
           placeholder="Search for exercises"
           sx={{
-            height: "px",
             width: { lg: "800px", xs: "350px" },
             input: { border: "none", borderRadius: "4px" },
             borderRadius: "40px",
