@@ -31,8 +31,10 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
             textTransform: "capitalize",
           }}
         >
-          More{" "}
-          <span style={{ color: "#CC2526" }}>{exerciseDetails.muscle}</span>{" "}
+          {" "}
+          <span style={{ color: "#CC2526" }}>
+            {exerciseDetails.muscle}
+          </span>{" "}
           Exercises
         </Typography>
         <Stack m={3}>
@@ -151,8 +153,10 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
             textTransform: "capitalize",
           }}
         >
-          More{" "}
-          <span style={{ color: "#CC2526" }}>{exerciseDetails.difficulty}</span>{" "}
+          {" "}
+          <span style={{ color: "#CC2526" }}>
+            {exerciseDetails.difficulty}
+          </span>{" "}
           Exercises
         </Typography>
         <Stack m={3}>
@@ -271,7 +275,7 @@ const SimilarExercises = ({ Exercises, exerciseDetails }) => {
             textTransform: "capitalize",
           }}
         >
-          More <span style={{ color: "#CC2526" }}>Equipment</span> Exercises
+          <span style={{ color: "#CC2526" }}>Equipment</span> Exercises
         </Typography>
         <Stack m={3}>
           {Exercises.length > 0 ? (
