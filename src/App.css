@@ -134,9 +134,6 @@ body {
 @media screen and (max-width: 1550px) {
   .right-arrow {
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     bottom: 0px;
     right: -90%;
@@ -146,9 +143,6 @@ body {
   }
   .left-arrow {
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     top: 245px;
     right: -5%;
