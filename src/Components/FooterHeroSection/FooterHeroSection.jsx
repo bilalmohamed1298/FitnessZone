@@ -29,7 +29,7 @@ const FooterHeroSection = () => {
           variant="h6"
           sx={{ mb: 2, fontSize: { md: "20px", xs: "11px" } }}
         >
-          Join us today and start your journey to a healthy <br/> & strong body
+          Join us today and start your journey to a healthy & strong body
         </Typography>
         <Button
           variant="contained"
