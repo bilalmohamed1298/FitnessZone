@@ -114,6 +114,9 @@ const Exercises = () => {
               page={page}
               color="error"
               onChange={handlePageChange}
+              onClick={window.scrollTo({
+                top:1340
+              })}
             />
           </Box>
         </>
