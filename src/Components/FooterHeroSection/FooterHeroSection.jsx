@@ -21,7 +21,7 @@ const FooterHeroSection = () => {
           variant="h3"
           fontWeight="bold"
           gutterBottom
-          sx={{ fontSize: { md: "50px", xs: "30px" } }}
+          sx={{ fontSize: { md: "40px", sm: "30px", xs: "25px" } }}
         >
           Get the fitness you deserve
         </Typography>

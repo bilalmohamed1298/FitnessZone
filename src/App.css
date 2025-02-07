@@ -110,7 +110,7 @@ body {
 .bodyPart-card {
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
-  background-color: #ffd5d58e;
+  background-color: #ffd5d55e;
   border-radius: 5%;
 }
 
