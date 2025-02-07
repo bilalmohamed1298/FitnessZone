@@ -1,6 +1,6 @@
 import { Box, Button, Typography, Container } from "@mui/material";
 import { Link } from "react-router-dom";
-import footerHero from '../../../public/images/footer-hero.png';
+import footerHero from '/public/images/footer-hero.png';
 
 const FooterHeroSection = () => {
   return (
