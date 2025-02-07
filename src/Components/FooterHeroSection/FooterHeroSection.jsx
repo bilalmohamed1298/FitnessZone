@@ -1,12 +1,12 @@
 import { Box, Button, Typography, Container } from "@mui/material";
 import { Link } from "react-router-dom";
-import footerHero from '/public/images/footer-hero.png';
+
 
 const FooterHeroSection = () => {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${footerHero})`,
+        backgroundImage: `url(${'/public/images/Footer-Hero.png'})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "300px",

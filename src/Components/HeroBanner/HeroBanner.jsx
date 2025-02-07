@@ -2,7 +2,6 @@ import { Box, Typography, Button } from "@mui/material";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-import bannerPhoto from '/public/images/banner.png';
 
 const HeroBanner = () => {
   const headingRef = useRef();
@@ -85,7 +84,7 @@ const HeroBanner = () => {
         Fitness Zone
       </Typography>
       <img
-        src={bannerPhoto}
+        src={'/public/images/banner.png'}
         alt=""
         className="hero-banner-img"
       />
