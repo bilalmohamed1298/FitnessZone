@@ -10,7 +10,6 @@ import AllExercises from "./Components/AllExercises/AllExercises";
 
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
-import FooterHeroSection from "./Components/FooterHeroSection/FooterHeroSection";
 
 const theme = createTheme({
   typography: {},
@@ -23,14 +22,15 @@ function App() {
         <ThemeProvider theme={theme}>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
             <Route path="/exercises" element={<AllExercises />} />
             <Route path="/exercise/:id" element={<ExerciseDetails />} />
           </Routes>
         </ThemeProvider>
       </Box>
-      <FooterHeroSection />
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
+      </Routes>
       <Footer />
     </div>
   );
