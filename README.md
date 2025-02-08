@@ -34,7 +34,7 @@ Screenshots showcasing the website interface or key features:
   ![Homepage Screenshot](/Screenshots/Details-Screenshot.png)
 
 - **Fully Responsive Design:**
-  ![Feature Screenshot](/Screenshots/Responsive-Screenshot.png)
+  ![Feature Screenshot](/Screenshots/Responsive-Design-Screenshot.png)
 
 
 ---
