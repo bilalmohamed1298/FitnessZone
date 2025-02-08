@@ -20,8 +20,6 @@ Check out the live demo of the project here:
 
 - ✅ __Animations & Interactivity:__ Enhanced user engagement with GSAP for smooth animations and dynamic effects.
 
-- ✅ __Form Validation:__ Enhanced user input accuracy with Joi validation.
-
 - ✅  __Data Fetching:__ Integrated external services using Rapid APIs for real-time and scalable data retrieval.
 
 ---
