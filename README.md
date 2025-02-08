@@ -9,7 +9,7 @@ Check out the live demo of the project here:
 [Fitness Zone Live Demo](https://fitness-zone-demo.vercel.app/)
 
 
-![Thumpnail](/Screenshots/Final2.png)
+![Thumpnail](/Screenshots/Thumbnail.png)
 
 ---
 
@@ -28,13 +28,13 @@ Check out the live demo of the project here:
 Screenshots showcasing the website interface or key features:
 
 - **Landing page:**
-  ![Homepage Screenshot](/Screenshots/Final3.png)
+  ![Homepage Screenshot](/Screenshots/Home-Screenshot.png)
 
 - **Exercise Details:**
-  ![Homepage Screenshot](/Screenshots/Final5.png)
+  ![Homepage Screenshot](/Screenshots/Details-Screenshot.png)
 
 - **Fully Responsive Design:**
-  ![Feature Screenshot](/Screenshots/Final4.png)
+  ![Feature Screenshot](/Screenshots/Responsive-Screenshot.png)
 
 
 ---
