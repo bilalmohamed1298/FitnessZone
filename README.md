@@ -46,6 +46,7 @@ Screenshots showcasing the website interface or key features:
 - React.js (Vite)
 - Material UI
 - GSAP
+- REST APIs
 - React Router
 - State Management (Context)
 - Axios for API Fetching
