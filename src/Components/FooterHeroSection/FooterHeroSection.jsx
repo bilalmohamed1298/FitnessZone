@@ -50,7 +50,7 @@ const FooterHeroSection = () => {
             });
           }}
         >
-          <Link to="home" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
             Join Us
           </Link>
         </Button>
