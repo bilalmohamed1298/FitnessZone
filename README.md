@@ -18,6 +18,11 @@ Check out the live demo of the project here:
 
 - ✅ __Seamless Navigation & Component Management:__ Built with React for structured components and smooth navigation. Integrated with Vite for faster development and optimized performance.
 
+- ✅ Well-structured __state management__ using __Context API__.
+
+
+- ✅ Efficient and reusable components powered by __React Hooks__.
+
 - ✅ __Smart search & filtering__ to find the perfect workout for your goals.
 
 - ✅ __Animations & Interactivity:__ Enhanced user engagement with GSAP for smooth animations and dynamic effects.
